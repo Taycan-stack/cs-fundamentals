@@ -1,3 +1,12 @@
+# 목차
+Summing Up
+
+File I/O
+open
+with
+CSV
+PIL
+
 # File I/O란?
 
 File Input/Output
@@ -9,3 +18,14 @@ File Input/Output
 File I/O를 이용하면 데이터를 디스크(로컬)에 저장해서 나중에도 사용 가능
 
     메모리(RAM)이 아니라 디스크(SSD/HDD)에 저장됨.
+
+
+| 개념 | 설명 |
+| --- | --- |
+| Memory | 프로그램이 실행될 때 잠깐 저장되는 공간 |
+| --- | --- |
+| File I/O | 데이터를 파일에 저장하거나, 파일에서 읽어오는 기능 |
+| --- | --- |
+| append | 리스트 끝에 데이터를 추가 |
+| --- | --- |
+| sorted | 리스트를 정렬한 새로운 리스트를 반환 |
