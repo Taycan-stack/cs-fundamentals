@@ -184,7 +184,123 @@ def hello():
 
 ---
 
-이제 ✅ 0강에서 배운 걸 다 정리했어요!
-다음은 **1강 Conditionals (조건문)** 으로 넘어갈 차례예요.
+🧩 CS50 Python Lecture 1 — Conditionals
+🎯 1. 배경 설명
 
-넘어갈까요?
+이전 0강에서는 “컴퓨터에게 일을 시키는 방법”을 배웠어요.
+하지만… 세상 모든 일은 조건에 따라 달라지죠!
+
+예를 들어 👇
+
+비가 오면 → 우산을 챙기고 ☔
+
+아니면 → 그냥 나간다 🚶‍♀️
+
+이런 “상황에 따라 다른 행동을 하는” 코드를 만들고 싶을 때
+조건문(Conditional) 을 써요.
+
+⚙️ 2. 기본 구조: if, elif, else
+x = int(input("x: "))
+y = int(input("y: "))
+
+if x < y:
+    print("x is less than y")
+elif x > y:
+    print("x is greater than y")
+else:
+    print("x is equal to y")
+
+
+🪄 한 줄씩 설명
+
+if: “만약 ~라면”
+
+elif: “그렇지 않고 만약 ~라면”
+
+else: “그 외의 경우엔”
+
+들여쓰기(Indentation)가 매우 중요해요!
+→ “이 줄은 if문 안에 포함돼 있어요”라는 뜻이에요.
+
+💬 3. 비교 연산자
+연산자	의미
+==	같다
+!=	다르다
+<	작다
+>	크다
+<=	작거나 같다
+>=	크거나 같다
+
+예시 👇
+
+if score >= 90:
+    print("A학점!")
+
+🔀 4. 논리 연산자: and, or, not
+
+조건을 합칠 때 사용해요.
+
+if x > 0 and y > 0:
+    print("둘 다 양수!")
+
+연산자	의미	예시
+and	둘 다 참이어야 함	“x도, y도”
+or	하나라도 참이면 됨	“x거나 y거나”
+not	반대로	“참이면 거짓, 거짓이면 참”
+💡 5. Modulo (%)
+
+숫자를 나눈 나머지를 구해요.
+
+if n % 2 == 0:
+    print("짝수")
+else:
+    print("홀수")
+
+
+👉 % 2로 나머지를 확인하면
+짝수인지 홀수인지 바로 알 수 있죠!
+
+🧠 6. Pythonic Coding
+
+파이썬답게! ✨
+불필요한 조건문을 줄이고, 간결하게 표현할 수 있어요.
+
+예시 👇
+
+if n % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
+
+를 이렇게 줄일 수도 있어요 👇
+
+print("Even" if n % 2 == 0 else "Odd")
+
+🧩 7. match 문 (파이썬 3.10+)
+
+파이썬 최신 문법으로 switch-case 역할을 해요.
+
+name = input("Name: ")
+
+match name:
+    case "Harry":
+        print("Gryffindor")
+    case "Draco":
+        print("Slytherin")
+    case _:
+        print("Who?")
+
+
+case _:는 “그 외 모든 경우”
+
+여러 가지 경우를 깔끔하게 나눌 때 아주 유용해요.
+
+✅ 핵심 정리
+개념	설명
+if, elif, else	조건에 따라 다른 행동
+비교 연산자	크다, 같다, 다르다 등
+and, or, not	조건 결합
+%	나머지 (짝/홀 판단에 유용)
+Pythonic Style	코드 짧고 읽기 좋게
+match	여러 조건을 깔끔하게 구분
