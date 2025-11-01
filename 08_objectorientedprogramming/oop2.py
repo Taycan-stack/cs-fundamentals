@@ -33,6 +33,7 @@ class Student:
 
 # raise 예외 처리
 # raise : 일부러 에러를 일으키는 명령어
+# raise는 데이터를 깨끗하게 유지해주는 안전장치 역할을 함
 def divide(a, b):
     if b == 0:
         raise ValueError("0으로는 나눌 수 없습니다!") 
@@ -40,3 +41,23 @@ def divide(a, b):
 print(divide(10, 2))        
 print(divide(10, 0))
 
+
+# try/except 에러 잡아서 처리하기
+try:
+    x = int(input("숫자를 입력하세요: "))
+    print(10/x)
+except ZeroDivisionError:
+    print("0으로는 나눌 수 없습니다")
+except ValueError:
+    print("숫자만 입력해주세요")    
+
+
+
+"""
+🧠 정리
+키워드	설명
+try	“이 코드를 실행해봐”
+except	“에러가 나면 이렇게 처리해”
+raise	“에러를 일부러 발생시켜”
+ValueError, ZeroDivisionError 등	에러 종류 (상황별로 다름)
+"""    
